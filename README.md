@@ -38,3 +38,11 @@ Otherwise, the encyclopedia entry should be saved to disk, and the user should b
 
 - Markdown to HTML Conversion: On each entry’s page, any Markdown content in the entry file should be converted to HTML before being displayed to the user. You may use the python-markdown2 package to perform this conversion, installable via pip3 install markdown2.
   - Challenge for those more comfortable: If you’re feeling more comfortable, try implementing the Markdown to HTML conversion without using any external libraries, supporting headings, boldface text, unordered lists, links, and paragraphs. You may find using regular expressions in Python helpful.
+
+### Usage:
+
+Requires Python(3) and the Python Pacakage Installe (pip) to run:
+
+- Install requirements (Django): pip install -r requirements.txt
+- Run the app locally: python manage.py runserver
+
