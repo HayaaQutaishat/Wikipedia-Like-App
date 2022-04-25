@@ -9,7 +9,7 @@ Wikipedia is a free online encyclopedia that consists of a number of encyclopedi
 The aim of this project was to build a Wikipedia-like online encyclopedia using the Python Django framework. Users can view available article entries, as well as search for entries on the site. New entries can be created by users, and existing entries can be edited. There is also a 'random page' function that selects and displays a page of the encyclopedia at random.
 
 
-### Project Specification :
+### Project Requirements :
 
 - Entry Page: Visiting /wiki/TITLE, where TITLE is the title of an encyclopedia entry, should render a page that displays the contents of that encyclopedia entry.
   - The view should get the content of the encyclopedia entry by calling the appropriate util function.
