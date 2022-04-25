@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    <h1>Error: Entry not valid, please try again!</h1>
+    <li><a href="{% url 'entry' entry_title %}">{{entry_title}}</a> Already Exists!</li>
+{% endblock %}
