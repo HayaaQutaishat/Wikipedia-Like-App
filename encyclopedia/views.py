@@ -116,11 +116,12 @@ def edit(request):
 
 def randompage(request):
     entries = util.list_entries()
-    random_page = random.choice(entries)
-    return render(request, "encyclopedia/random.html", {
-        "random_page": random_page,
-
-    })
+    entry = random.choice(entries)
+    if util.get_entry(entry) != None:
+        HTML_entry = Markdown().convert(util.get_entry(entry))
+        return render(request,"encyclopedia/random.html",{
+            "random_page" : HTML_entry
+        })
 
 
 

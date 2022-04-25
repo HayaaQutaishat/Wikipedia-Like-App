@@ -6,7 +6,6 @@
 
 
 {% block body %}
-    <h1>Random Page</h1>
-    {{ random_page }}
+    {{ random_page|safe }}
 
 {% endblock %}
