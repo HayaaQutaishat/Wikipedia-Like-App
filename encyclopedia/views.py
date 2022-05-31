@@ -21,7 +21,6 @@ class NewPageForm(forms.Form):
       "rows": 10,
       }))
 
-
 class EditForm(forms.Form):
      entry_title = forms.CharField(label='Entry title', widget=forms.TextInput(attrs={
       "placeholder": "Page Title"}))
@@ -96,23 +95,23 @@ def newpage(request):
         "form": NewPageForm()
     })
 
-def edit(request):
+def edit(request,title):
     if request.method == 'POST':
         form = EditForm(request.POST)
         if form.is_valid():
             entry_title = form.cleaned_data["entry_title"]
             content = form.cleaned_data["content"]
-            util.save_entry(entry_title, content)
+            util.save_entry(title, content)
             return redirect(reverse('entry', args=[entry_title]))
-        else:
-            return render(request, "encyclopedia/edit.html",{
-            "form": EditForm(),
-            "entry_title": entry_title
+            
+    else:
+        content = util.get_entry(title)
+        return render(request, "encyclopedia/edit.html",{
+            "form": EditForm(initial={'entry_title':title, 'content':content}),
+            "title": title
         })
 
-    return render(request, "encyclopedia/edit.html",{
-        "form": EditForm()
-    })
+
 
 def randompage(request):
     entries = util.list_entries()
