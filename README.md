@@ -46,3 +46,10 @@ Requires Python(3) and the Python Pacakage Installe (pip) to run:
 - Install requirements (Django): pip install -r requirements.txt
 - Run the app locally: python manage.py runserver
 
+## YouTube Video:
+
+Youtube link: A short video that shows every element of the specification: https://www.youtube.com/watch?v=FYL97AUlLzM
+
+
+
+
