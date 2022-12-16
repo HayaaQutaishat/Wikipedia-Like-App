@@ -1,6 +1,5 @@
-# CS50W-Project1-Wiki
+# Wikipedia Like Web Application
 
-## CS50 Web - Programming with Python and JavaScript
 
 ### Project purpose :
 
